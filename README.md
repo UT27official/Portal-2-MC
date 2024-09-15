@@ -7,4 +7,4 @@ Skript required addons:
 Our server:
 - portal.minekeep.gg
 
-!!! Please note that the server is under development !!!
+!!! Please note that the server is under development and can't be joined at the moment !!!
