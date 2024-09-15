@@ -1,0 +1,66 @@
+{
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "block/uplayer_spawn",
+		"1": "block/downlayer_spawn",
+		"particle": "block/uplayer_spawn"
+	},
+	"elements": [
+		{
+			"name": "1st",
+			"from": [1, 4, 1],
+			"to": [15, 8, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9, 0, 9]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 5], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 5], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 5], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 5], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "2nd",
+			"from": [0, 2, 0],
+			"to": [16, 4, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 2, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"east": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"south": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"west": {"uv": [0, 0, 16, 2], "texture": "#0"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "3rd",
+			"from": [-1, 1, -1],
+			"to": [17, 2, 17],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-16, 1, -16]},
+			"faces": {
+				"north": {"uv": [4.99999, 10.66667, 10.99991, 10.99999], "texture": "#1"},
+				"east": {"uv": [5, 5, 5.33333, 11], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [5, 5, 11, 5.33325], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [10.66667, 4.99992, 10.99992, 10.99992], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [11, 11, 5, 5], "texture": "#1"},
+				"down": {"uv": [11, 5, 5, 11], "texture": "#1"}
+			}
+		},
+		{
+			"name": "4th",
+			"from": [-16, 0, -16],
+			"to": [32, 1, 32],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-16, 0, -16]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0.33325], "texture": "#1"},
+				"east": {"uv": [15.66667, 0, 16, 16], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [0, 15.66667, 16, 16], "rotation": 180, "texture": "#1"},
+				"west": {"uv": [0, 0, 0.33325, 16], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [16, 16, 0, 0], "texture": "#1"},
+				"down": {"uv": [16, 0, 0, 16], "texture": "#1"}
+			}
+		}
+	]
+}

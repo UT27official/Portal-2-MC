@@ -1,0 +1,149 @@
+on inventory click:
+    close player's inventory
+    cancel the event
+on item held change:
+    set current hotbar slot of player to 4
+on item damage:
+    cancel the event
+on join:
+    clear player's inventory
+    set {_lobby} to location at (-38.5, 105, 99.5) in world "world"
+    set {_lobby}'s pitch to 0
+    set {_lobby}'s yaw to -90
+    teleport player to {_lobby}
+    set current hotbar slot of player to 4
+    if player does not have a wooden hoe named "§r§b§lPortal Gun":
+        set slot 4 of player to 1 wooden hoe named "§r§b§lPortal Gun" with custom model data 1
+    set {_p} to player
+    if {portalgun::%{_p}%::*} does not exist:
+        set {portalgun} to {_p}
+        set {portalgun::%{_p}%::gun} to "blue"
+    send "§cSome mods are required for the server to function properly!" to player
+    send "§cMake sure you have at least one of these mods installed:" to player
+    send " " to player
+    send " " to player
+    send "§b- <link:https://optifine.net/downloads><tooltip:§a§l§oClick me!>§lOptiFine<reset>" to player
+    send "§6or" to player
+    send "§b- <link:https://modrinth.com/mod/entity-model-features><tooltip:§a§l§oClick me!>§l§nEntity Model Features<reset>§r §6with" to player
+    send "§b-> <link:https://modrinth.com/mod/entitytexturefeatures><tooltip:§a§l§oClick me!>§l§nEntity Texture Features<reset>§r §c§o(REQUIRED!!!)" to player
+    send " " to player
+    send "§cPlease note too, that <link:https://client.badlion.net/><tooltip:§a§l§oClick me!>§b§l§nBadlion Client<reset>§r §cisn't supported on this server!" to player
+    play sound "minecraft:block.note_block.pling" at volume 1 at pitch 1 to player
+    wait 0.05 seconds
+    play sound "minecraft:block.note_block.pling" at volume 1 at pitch 1.25 to player
+    wait 0.05 seconds
+    play sound "minecraft:block.note_block.pling" at volume 1 at pitch 1.5 to player
+    wait 0.05 seconds
+    play sound "minecraft:block.note_block.pling" at volume 1 at pitch 2 to player
+on off hand switch:
+    cancel the event
+on drop:
+    cancel the event
+
+on stepping on a pressure plate:
+    event-block is a polished blackstone pressure plate:
+        set {_blackroom} to location at (-31.5, 105, 99.5) in world "world"
+        set {_blackroom}'s pitch to 0
+        set {_blackroom}'s yaw to -90
+        teleport player to {_blackroom}
+        apply blindness 255 without any particles to player for 2 seconds
+        apply invisibility 255 without any particles to player for 1 second
+        apply darkness 255 without any particles to player for 3 seconds
+        wait 1 second
+        play sound "portal:music.relaxationcenter.relaxation_center_intro_1" at volume 1 at pitch 1 to player
+        set {_teleport} to location at (-55.5, 93, 18.5) in world "world"
+        set {_teleport}'s pitch to -90
+        set {_teleport}'s yaw to 0
+        teleport player to {_teleport}
+
+
+on right click:
+    set {_p} to player
+    send "check r" to player
+    if {portalgun::%{_p}%} exists:
+        send "exists" to player
+        if {portalgun::%{_p}%::*} is "blue":
+            send "yes" to player
+            delete {portalgun::%{_p}%::*}
+            set {portalgun::%{_p}%::gun} to "orange"
+            send "%{portalgun::%{_p}%::*}% player weee" to {_p}
+on left click:
+    send "check l" to player
+    if {portalgun::%{_p}%} exists:
+        send "exists" to player
+        if {portalgun::%{_p}%::*} is "orange":
+            send "yes" to player
+            delete {portalgun::%{_p}%::*}
+            set {portalgun::%{_p}%::gun} to "blue"
+            send "%{portalgun::%{_p}%::*}% player weee" to {_p}
+
+command /playerwins <player>:
+    trigger:
+        set {_p} to arg-1
+        delete {portalgun::%{_p}%}
+        delete {portalgun::%{_p}%::*}
+
+# Anti AntiCheat grabber commands
+command /grim [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        set {_arg1} to arg-1
+        if arg-1 is set:
+            execute player command "/grimac %{_arg1}%"
+        else:
+            execute player command "/grimac"
+command /vulcan [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        set {_arg1} to arg-1
+        if arg-1 is set:
+            execute player command "/vulcan:vulcan %{_arg1}%"
+        else:
+            execute player command "/vulcan:vulcan"
+command /polar [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        send "§cKiddo, u know this is fake, right? We have Vulcan + Grim!" to player
+command /intave [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        send "§cKiddo, u know this is fake, right? We have Vulcan + Grim!" to player
+command /karhu [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        send "§cKiddo, u know this is fake, right? We have Vulcan + Grim!" to player
+command /ncp [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        send "§cKiddo, u know this is fake, right? We have Vulcan + Grim!" to player
+command /nocheatplus [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        send "§cKiddo, u know this is fake, right? We have Vulcan + Grim!" to player
+command /verus [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        send "§cKiddo, u know this is fake, right? We have Vulcan + Grim!" to player
+command /watchcat [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        send "§cKiddo, u know this is fake, right? We have Vulcan + Grim!" to player
+command /watchdog [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        send "§cKiddo, u know this is fake, right? We have Vulcan + Grim!" to player
+command /anticheat [<text>]:
+    permission: portal.admin
+    permission message: §cHm... Not sure if this is the anticheat? Well, you will never know ;D
+    trigger:
+        send "§cKiddo, u know this is fake, right? We have Vulcan + Grim!" to player
