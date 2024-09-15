@@ -1,0 +1,42 @@
+{
+  "music.relaxationcenter.relaxation_center_intro_1": {
+    "sounds": [
+      "portal:relaxation_center_intro_1"]
+    },
+  "music.relaxationcenter.relaxation_center_intro_2": {
+    "sounds": [
+      "portal:relaxation_center_intro_2"]
+    },
+  "announcer.relaxationcenter.relaxation_center_announcer_1": {
+    "sounds": [
+      "portal:relaxation_center_announcer_1"]
+    },
+  "announcer.relaxationcenter.relaxation_center_announcer_2": {
+    "sounds": [
+      "portal:relaxation_center_announcer_2"]
+    },
+  "announcer.relaxationcenter.relaxation_center_announcer_3": {
+    "sounds": [
+      "portal:relaxation_center_announcer_3"]
+    },
+  "announcer.relaxationcenter.relaxation_center_announcer_4": {
+    "sounds": [
+      "portal:relaxation_center_announcer_4"]
+    },
+  "announcer.relaxationcenter.relaxation_center_announcer_5": {
+    "sounds": [
+      "portal:relaxation_center_announcer_5"]
+    },
+  "ambient.relaxationcenter.relaxation_center_ambient": {
+    "sounds": [
+      "portal:relaxation_center_ambient"]
+    },
+  "ambient.light_ambient": {
+    "sounds": [
+      "portal:light_ambient"]
+    },
+  "sound.main.notification": {
+    "sounds": [
+      "portal:notification"]
+    }
+}

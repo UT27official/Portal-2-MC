@@ -1,0 +1,39 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/button",
+	"textures": {
+		"0": "block/tvhandle",
+		"1": "block/tvwallhanger",
+		"particle": "block/tvhandle"
+	},
+	"elements": [
+		{
+			"name": "tvhandle",
+			"from": [7.25, 0.5, 3],
+			"to": [8.75, 12, 4.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 1, 2]},
+			"faces": {
+				"north": {"uv": [0, 0, 2, 12], "texture": "#0"},
+				"east": {"uv": [2, 0, 4, 12], "texture": "#0"},
+				"south": {"uv": [4, 0, 6, 12], "texture": "#0"},
+				"west": {"uv": [6, 0, 8, 12], "texture": "#0"},
+				"up": {"uv": [10, 2, 8, 0], "texture": "#0"},
+				"down": {"uv": [10, 2, 8, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "tvwallhanger",
+			"from": [6.25, 0, 0],
+			"to": [9.75, 0.5, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 0]},
+			"faces": {
+				"north": {"uv": [8, 1, 12, 2], "texture": "#1"},
+				"east": {"uv": [0, 8, 8, 9], "texture": "#1"},
+				"south": {"uv": [8, 2, 12, 3], "texture": "#1"},
+				"west": {"uv": [8, 0, 16, 1], "texture": "#1"},
+				"up": {"uv": [4, 8, 0, 0], "texture": "#1"},
+				"down": {"uv": [8, 0, 4, 8], "texture": "#1"}
+			}
+		}
+	]
+}
